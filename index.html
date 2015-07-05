@@ -1,0 +1,36 @@
+<!-- 
+ 
+  Task Manager For Scrumm-based Projects
+
+index.html
+
+Created on July 4, 2015
+@author Javier Quevedo-Fernandez
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Project Management App</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+    
+    <!-- Model -->
+    <script type="text/javascript" src="src/model/task.js"></script>
+    <script type="text/javascript" src="src/model/worker.js"></script>
+    <script type="text/javascript" src="src/model/project.js"></script>
+
+    <!-- View -->
+    <script type="text/jsx" src="src/taskRow.js"></script>
+    <script type="text/jsx" src="src/taskTable.js"></script>
+    <script type="text/jsx" src="src/searchBar.js"></script>
+    <script type="text/jsx" src="src/filterableTaskTable.js"></script>
+    <script type="text/jsx" src="src/main.js"></script>
+    
+  </head>
+  <body>
+    <div id="content"></div>
+  </body>
+</html>

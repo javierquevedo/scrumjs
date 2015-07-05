@@ -1,0 +1,21 @@
+{
+  "name": "scrumjs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/senc01a/scrumjs",
+  "authors": [
+    "Javier Quevedo <javier@mail.com>"
+  ],
+  "description": "Scrumjs packages",
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qunit": "~1.18.0"
+  }
+}
