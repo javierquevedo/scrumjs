@@ -14,7 +14,7 @@ var TaskTable = React.createClass({
 			return  task.getName().toLowerCase().indexOf(props.filterText.toLowerCase()) > -1;
 		})
 		.map(function(task){
-				return <jqf.TaskRow key={task.getName()} task={task} />
+				return <jqf.TaskRow key={task.getID()} task={task} />
 		});
 		return(
 				<div className="row spacer">
@@ -22,9 +22,11 @@ var TaskTable = React.createClass({
 					<table width="100%">
 						<thead>
 							<tr>
-								<th>Task Title</th>
-								<th>Task Estimate</th>
-								<th>View</th>
+								<th>Name</th>
+								<th>Estimate</th>
+								<th>Spent</th>
+								<th>Remaining</th>
+								<th>Edit</th>
 							</tr>
 						</thead>
 						<tbody>

@@ -17,6 +17,8 @@ var jqf = jqf || {};
 					<tr>
 					<td>{this.props.task.getName()}</td>
 					<td>{this.props.task.getEstimate()}</td>
+					<td>{this.props.task.getSpent()}</td>
+					<td>{this.props.task.getRemaining()}</td>
 					<td><a href="#">View</a></td>
 					</tr>
 				);

@@ -23,7 +23,7 @@ var jqf = jqf || {};
 			return (
 				<div className="spacer">
 				<p><jqf.SearchBar onFilterInput={this.handleFilterInput} filterText={this.state.filterText} /></p>
-				<p><TaskTable filterText={this.state.filterText} tasks={this.props.tasks} /> </p>
+				<p><TaskTable filterText={this.state.filterText} tasks={this.props.tasks} /></p>
 				</div>
 			)
 		}

@@ -13,11 +13,31 @@
 var jqf = jqf || {};
 
 (function(jqf){
-	var Task = function(){
-		this._name = "Unnamed Task";
-		this._estimate = 0;
-		this.remaining = 0;
+	var Task = function(name, estimate){
+		
+		if (name === undefined)
+			this._name = "Unnamed Task";
+		else
+			this._name = name;
+
+		this._taskId = jqf.UUIDGenerator.generate();
+
+		if (estimate === undefined){
+			this._estimate = 0;
+			this.remaining = 0;
+		}else{
+			this.setEstimate(estimate);
+		}
+		
 		this._spent = 0;
+	}
+
+	/**
+ 	* Provides the id of the task
+ 	* @return {string} uuid of the task
+ 	*/
+	Task.prototype.getID = function(){
+		return this._taskId;
 	}
 
 	/**

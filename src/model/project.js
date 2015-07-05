@@ -37,6 +37,11 @@ var jqf = jqf || {};
 		this._tasks.push(task);
 	}
 
+	Project.prototype.createTask = function(name, estimate){
+		var aTask = new jqf.Task(name, estimate);
+		this.addTask(aTask);
+	}
+
 	Project.prototype.getWorkers = function(){
 		return this._workers;
 	}

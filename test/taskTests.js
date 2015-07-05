@@ -21,6 +21,14 @@ QUnit.test( "Task should have the right times after setting the estimate", funct
 	assert.ok( task.getSpent() === 0, "Task has the right spent" );
 });
 
+QUnit.test( "A task may be created with initial name and estimate", function( assert ) {
+	var taskName = "The Task Name";
+	var taskEstimate = 8;
+	var someTask = new jqf.Task(taskName, taskEstimate);
+	assert.ok( someTask.getEstimate() === taskEstimate, "Task has the right estimate" );
+	assert.ok( someTask.getName() === taskName, "Task has the right name" );
+});
+
 QUnit.test( "Task should have the right times after setting the estimate", function( assert ) {
 	var estimate = 8;
 	var spent =  2;
