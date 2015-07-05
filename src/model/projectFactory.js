@@ -31,7 +31,7 @@ var jqf = jqf || {};
 		
 		for (var i = 0; i < 20; i++){
 			var aTask = new jqf.Task();
-			aTask.setName("Task" + i.toString());
+			aTask.setName("Task " + i.toString());
 			aTask.setEstimate(Math.round(Math.random()*8) + 1);
 			project.addTask(aTask);
 		}

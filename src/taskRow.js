@@ -15,8 +15,8 @@ var jqf = jqf || {};
 		render: function(){
 			return(
 					<tr>
-					<td>{this.props.task.title}</td>
-					<td>{this.props.task.estimate}</td>
+					<td>{this.props.task.getName()}</td>
+					<td>{this.props.task.getEstimate()}</td>
 					<td><a href="#">View</a></td>
 					</tr>
 				);

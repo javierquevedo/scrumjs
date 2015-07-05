@@ -11,10 +11,10 @@ var TaskTable = React.createClass({
 		var props = this.props;
 		var rows = this.props.tasks
 		.filter(function(task){
-			return  task.title.toLowerCase().indexOf(props.filterText.toLowerCase()) > -1;
+			return  task.getName().toLowerCase().indexOf(props.filterText.toLowerCase()) > -1;
 		})
 		.map(function(task){
-				return <jqf.TaskRow key={task.title} task={task} />
+				return <jqf.TaskRow key={task.getName()} task={task} />
 		});
 		return(
 				<div className="row spacer">
