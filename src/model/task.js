@@ -61,7 +61,7 @@ var jqf = jqf || {};
  	* @return {Number} sum
  	*/
 	Task.prototype.spend = function(hours){
-		this._estimate -= hours;
+		this._remaining -= hours;
 		this._spent += hours;
 	}
 
