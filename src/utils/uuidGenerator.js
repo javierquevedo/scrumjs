@@ -4,6 +4,7 @@
 * Created on July 5, 2015
 *
 * @author Javier Quevedo-Fernandez
+* Thanks to broofa @ http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
 **/
 
 var jqf = jqf || {};

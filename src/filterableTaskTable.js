@@ -19,11 +19,15 @@ var jqf = jqf || {};
 				filterText: filterText
 			});
 		},
+		handleTaskTimeIncrement: function(task){
+			this.props.onTaskTimeIncrement(task);
+		},
 		render: function(){
+			var onTaskIncrement = this.handleTaskTimeIncrement;
 			return (
 				<div className="spacer">
 				<p><jqf.SearchBar onFilterInput={this.handleFilterInput} filterText={this.state.filterText} /></p>
-				<p><TaskTable filterText={this.state.filterText} tasks={this.props.tasks} /></p>
+				<p><TaskTable filterText={this.state.filterText} tasks={this.props.tasks} onTaskTimeIncrement={onTaskIncrement} /></p>
 				</div>
 			)
 		}

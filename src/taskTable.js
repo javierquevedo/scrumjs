@@ -7,14 +7,18 @@
 **/
 
 var TaskTable = React.createClass({
+	handleTaskTimeIncrement: function(task){
+		this.props.onTaskTimeIncrement(task);
+	},
 	render: function(){
 		var props = this.props;
+		var handleTaskTimeIncrement = this.handleTaskTimeIncrement;
 		var rows = this.props.tasks
 		.filter(function(task){
 			return  task.getName().toLowerCase().indexOf(props.filterText.toLowerCase()) > -1;
 		})
 		.map(function(task){
-				return <jqf.TaskRow key={task.getID()} task={task} />
+				return <jqf.TaskRow key={task.getID()} task={task} onTaskTimeIncrement={handleTaskTimeIncrement} />
 		});
 		return(
 				<div className="row spacer">
@@ -26,7 +30,6 @@ var TaskTable = React.createClass({
 								<th>Estimate</th>
 								<th>Spent</th>
 								<th>Remaining</th>
-								<th>Edit</th>
 							</tr>
 						</thead>
 						<tbody>

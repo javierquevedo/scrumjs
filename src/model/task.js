@@ -13,6 +13,14 @@
 var jqf = jqf || {};
 
 (function(jqf){
+
+	/**
+ 	* Task Constructor
+ 	* 
+ 	* @constructor
+ 	* @param {string} name - The name of the task.
+ 	* @param {number} estimate - The estimate (hours) of the task
+ 	*/ 
 	var Task = function(name, estimate){
 		
 		if (name === undefined)
@@ -77,8 +85,7 @@ var jqf = jqf || {};
 
 	/**
  	* Adds two numbers
- 	* @param {Number} b
- 	* @return {Number} sum
+ 	* @param {Number} hours - The amount of hours spent in the task
  	*/
 	Task.prototype.spend = function(hours){
 		this._remaining -= hours;
@@ -86,18 +93,16 @@ var jqf = jqf || {};
 	}
 
 	/**
- 	* Adds two numbers
- 	* @param {Number} b
- 	* @return {Number} sum
+ 	* Provides the number of hours spent in the task
+ 	* @return {Number} Amount of hours spent
  	*/
 	Task.prototype.getSpent = function(){
 		return this._spent;
 	}
 
 	/**
- 	* Adds two numbers
- 	* @param {Number} b
- 	* @return {Number} sum
+ 	* Provides the amount of hours remaining to complete the task
+ 	* @return {Number} Amount of hours remaining to complete the task
  	*/
 	Task.prototype.getRemaining = function(){
 		return this._remaining;

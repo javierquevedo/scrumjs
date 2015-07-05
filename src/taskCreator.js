@@ -12,7 +12,6 @@ var jqf = jqf || {};
 	var TaskCreator = React.createClass({
 		handleSubmit: function(e) {
 			e.preventDefault();
-			
 			var taskName = React.findDOMNode(this.refs.name).value.trim();
 			var taskEstimate = parseInt(React.findDOMNode(this.refs.estimate).value.trim());
 			this.props.onNewTask(taskName, taskEstimate);

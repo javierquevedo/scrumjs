@@ -27,13 +27,15 @@ var jqf = jqf || {};
 
 		var project = new jqf.Project();
 
-		project.setName("A Sample Project");
+		project.setName("Sample Project");
 		
-		for (var i = 0; i < 20; i++){
+		for (var i = 0; i < 10; i++){
 			var aTask = new jqf.Task();
 			aTask.setName("Task " + i.toString());
 			aTask.setEstimate(Math.round(Math.random()*8) + 1);
+			aTask.spend(Math.round(Math.random()*8) + 1);
 			project.addTask(aTask);
+
 		}
 		return project;
 

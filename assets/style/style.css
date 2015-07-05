@@ -1,0 +1,11 @@
+
+
+tr.overbudget {
+	background-color: #CC9999; color: black;
+}
+tr.ontrack {
+	background-color: #00CC99; color: black;
+}
+tr.completed {
+	background-color: #FFFFFF; color: black;
+}
